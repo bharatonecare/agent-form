@@ -37,34 +37,35 @@ const PhoneNumberInput = (props) => {
         {props.input.label}
         {props.input.required && <span style={{ color: "red" }}>*</span>}
       </label>
-
-      <PhoneInput
-        inputClass="phone-input-class"
-        dropdownClass="phone-dropdown-class"
-        buttonClass="phone-button-class"
-        // country={props.state?.value?.dialCode || "in"}
-        country={country}
-        // value={props.state?.value?.phone || ""}
-        value={phone}
-        disabled={props.input.disabled === true ? true : false}
-        placeholder={"Enter a valid phone number"}
-        onChange={(value, data) => {
-          // setPhone(value);
-          // setDialCode(data.dialCode)
-          props.handleChange(props.input.title, {
-            dialCode: data.dialCode,
-            phone: value,
-          });
-        }}
-      />
-      {inValid && (
-        <p
-          className="validate-text text-danger mb-0 ms-1"
-          data-testid="errorElement"
-        >
-          please enter a 10 digit mobile number without country code
-        </p>
-      )}
+      <div classname="phone-container-class">
+        <PhoneInput
+          inputClass="phone-input-class"
+          dropdownClass="phone-dropdown-class"
+          buttonClass="phone-button-class"
+          // country={props.state?.value?.dialCode || "in"}
+          country={country}
+          // value={props.state?.value?.phone || ""}
+          value={phone}
+          disabled={props.input.disabled === true ? true : false}
+          placeholder={"Enter a valid phone number"}
+          onChange={(value, data) => {
+            // setPhone(value);
+            // setDialCode(data.dialCode)
+            props.handleChange(props.input.title, {
+              dialCode: data.dialCode,
+              phone: value,
+            });
+          }}
+        />
+        {inValid && (
+          <p
+            className="validate-text text-danger mb-0 ms-1"
+            data-testid="errorElement"
+          >
+            {props.input.errorELe}
+          </p>
+        )}
+      </div>
     </div>
   );
 };

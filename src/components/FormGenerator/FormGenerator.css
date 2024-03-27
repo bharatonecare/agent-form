@@ -17,6 +17,8 @@
 .field-container {
   flex: auto;
   margin-right: 10px;
+  position: relative;
+  width: 100%;
 }
 
 .btn-action {

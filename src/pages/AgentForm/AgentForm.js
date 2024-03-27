@@ -52,8 +52,7 @@ export const AgentForm = () => {
             return Boolean(value);
           },
           onChange: () => {},
-          errorELe:
-            "please enter a 10 digit mobile number without country code",
+          errorELe: "Required",
         },
         {
           title: "location",
@@ -63,7 +62,7 @@ export const AgentForm = () => {
           type: "text",
           required: false,
           validation: (input) => {
-            return input?.length !== 0;
+            return true;
           },
           onChange: () => {},
           errorELe: "Required",
@@ -106,7 +105,7 @@ export const AgentForm = () => {
           type: "text",
           required: false,
           validation: (input) => {
-            return input?.length !== 0;
+            return true
           },
           onChange: () => {},
           errorELe: "Required",
@@ -119,7 +118,7 @@ export const AgentForm = () => {
           type: "text",
           required: false,
           validation: (input) => {
-            return input?.length !== 0;
+            return true
           },
           onChange: () => {},
           errorELe: "Required",
@@ -127,21 +126,13 @@ export const AgentForm = () => {
       ],
       [
         {
-          type: "radio",
-          title: "Remarks",
-          intitalValue: "No",
-          radioFields: [
-            {
-              value: "Yes",
-              title: "Yes",
-            },
-            {
-              value: "No",
-              title: "No",
-            },
-          ],
-          required: true,
-          onChange: () => {},
+          title: "query",
+          label: "Tell us your remarks",
+          placeholder: "Please enter your remarks here.",
+          intitalValue: "",
+          // type textarea
+          type: "para",
+          required: false,
           validation: (input) => {
             return true;
           },
@@ -182,8 +173,8 @@ export const AgentForm = () => {
       value: "",
       isTouched: false,
     },
-    Remarks: {
-      value: "No",
+    query: {
+      value: "",
       isTouched: false,
     },
   };
@@ -193,7 +184,6 @@ export const AgentForm = () => {
   const handleChange = (field, newValue) => {
     setFormData((obj) => {
       let tempObj = { ...obj };
-
       tempObj[field] = { ...tempObj[field], value: newValue };
       return tempObj;
     });
@@ -216,42 +206,19 @@ export const AgentForm = () => {
         [ele]: formData[ele].value,
       };
     });
-    console.log(reqBody);
     toast.promise(axios.post(url, reqBody), {
       loading: "Sending...",
       success: "Thanks for contacting us.",
       error: "Something went wrong.",
     });
   };
-  const getFormConfig = () => {
-    let tempFormConfig = formConfig;
-    if (formData.Remarks.value === "Yes") {
-      tempFormConfig.fields = [
-        ...tempFormConfig.fields,
-        [
-          {
-            title: "query",
-            label: "Tell us your remarks",
-            placeholder: "Please enter your remarks here.",
-            intitalValue: "",
-            // type textarea
-            type: "para",
-            required: false,
-            validation: (input) => {
-              return input?.length !== 0;
-            },
-          },
-        ],
-      ];
-    }
-    return tempFormConfig;
-  };
+
   return (
     <div className="agent-form-container">
       <div className="agent-form">
         <FormGenerator
           arrayIndex={0}
-          array={getFormConfig()}
+          array={formConfig}
           handleChange={handleChange}
           handleTouch={handleTouch}
           formData={formData}

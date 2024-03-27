@@ -1,13 +1,86 @@
+@font-face {
+  font-family: "ProximaNova";
+  src: local("ProximaNova"),
+    url("./assets/fonts/ProximaNova/Proxima Nova Regular.ttf")
+      format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "ProximaNova";
+  src: local("ProximaNova"),
+    url("./assets/fonts/ProximaNova/Proxima Nova Bold.otf") format("opentype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "ProximaNova";
+  src: local("ProximaNova"),
+    url("./assets/fonts/ProximaNova/Proxima Nova Semi Bold.otf")
+      format("opentype");
+  font-weight: 600;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  height: 100%;
+  font-family: "ProximaNova";
+  font-weight: bold;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  position: relative;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: "ProximaNova";
+}
+
+* {
+  scroll-behavior: smooth;
+  font-weight: 400;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primaryColor: #ef5ea2;
+  --primaryDarkColor: #dd2f80;
+  --primaryLightColor: #f181a9;
+  --primaryExtraLightColor: #fff6fa;
+  --secondaryColor: #2d416b;
+  --secondaryDarkColor: #24375f;
+  --secondaryExtraLightColor: #f2f2f2;
+  --accent: #f2f2f2;
+  --buttonTextColor: white;
+  --boxColor: #fff6fa;
+  --largeFont: 45px;
+  --mediumFont: 40px;
+  --extraLargeFont: 46px;
+  --darkColor: black;
+  --shadowColor: #c3c3c3;
+  --borderColor: #e3e3e3;
+  --chipColor: rgb(239 239 239);
+  --darkShade: rgb(77, 77, 77);
+  --borderRadius: 12px;
+  --lighColor: rgb(150, 150, 150);
+  --accordianSummaryFontSize: 30px;
+}
+c a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+@media screen and (max-width: 300px) {
+  :root {
+    --largeFont: 35px;
+    --mediumFont: 30px;
+  }
 }

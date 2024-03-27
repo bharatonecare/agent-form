@@ -25,6 +25,9 @@
   display: flex;
   font-size: 15px;
   font-family: "ProximaNova";
+  position: absolute;
+  top: 0px;
+  right: 0px;
 }
 
 input::placeholder {
