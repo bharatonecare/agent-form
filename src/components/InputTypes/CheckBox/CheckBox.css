@@ -1,0 +1,50 @@
+.form-label {
+  font-family: "Inter", sans-serif;
+  color: var(--secondaryColor);
+  font-weight: 700;
+}
+
+.radio-box-content {
+  background-color: #f5f7f9;
+  padding: 8px;
+  border-radius: 1rem;
+}
+
+.form-check {
+  width: 100%;
+  display: flex;
+  align-self: center;
+  margin-left: 10px;
+}
+
+.form-check-label {
+  color: var(--secondaryColor);
+  font-family: "ProximaNova";
+  font-weight: lighter;
+  /* font-size: 15px; */
+}
+
+.validate-text {
+  margin-top: 4px;
+  display: flex;
+  font-size: 15px;
+  font-family: "ProximaNova";
+}
+.Checkbox-image {
+  height: 20px;
+  width: 20px;
+  border-radius: 30%;
+  /* background-color: black; */
+  border: 1px solid #757575;
+  position: relative;
+  z-index: 1;
+  left: -18px;
+  top: 2px;
+  margin-right: -18px;
+  margin-bottom: -7px;
+}
+.form-check-input:checked ~ .Checkbox-image {
+  background: url("../../../assets/images/check-square.svg");
+  background-size: cover;
+  border: none;
+}

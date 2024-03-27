@@ -1,0 +1,59 @@
+/* Radio css */
+
+.form-label {
+  font-family: "Inter", sans-serif;
+  color: var(--secondaryColor);
+  font-weight: 700;
+}
+
+.radio-box-content {
+  background-color: #f5f7f9;
+  padding: 8px;
+  border-radius: 1rem;
+}
+
+.form-check {
+  width: 50%;
+  display: flex;
+  align-self: center;
+  margin-left: 10px;
+}
+
+.form-check-label {
+  color: #797979;
+  font-family: "ProximaNova";
+  font-weight: lighter;
+  display: flex;
+  flex-direction: row;
+  margin-right: 7px;
+}
+
+.form-check-input {
+  visibility: hidden;
+}
+
+.label-title {
+  padding-left: 10px;
+  margin-bottom: 0px;
+}
+
+.Radio-image {
+  height: 20px;
+  width: 20px;
+  border-radius: 100%;
+  /* background-color: black; */
+  border: 1px solid #757575;
+  position: relative;
+  z-index: 1;
+  left: -18px;
+  top: 2px;
+  margin-right: -18px;
+  overflow: hidden;
+  margin-bottom: -2px;
+}
+
+.form-check-input:checked ~ .Radio-image {
+  background: url("../../../assets/images/green-tick.png");
+  background-size: cover;
+  border: none;
+}

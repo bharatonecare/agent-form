@@ -1,0 +1,26 @@
+.filter-multi-select-container {
+  width: 27vw;
+  /* height: 11vw; */
+}
+
+@media screen and (max-width: 1024px) {
+  /* Adjust the width for smaller screens */
+  .filter-multi-select-container {
+    width: 46vw;
+  }
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  /* Adjust the width for smaller screens */
+  .filter-multi-select-container {
+    width: 50vw;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /* Adjust the width for even smaller screens */
+  .filter-multi-select-container {
+    width: 92vw;
+  }
+}

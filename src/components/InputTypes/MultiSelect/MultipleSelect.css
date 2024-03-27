@@ -1,0 +1,19 @@
+/* Multi select css */
+
+.form-label {
+  font-family: "Inter", sans-serif;
+  color: var(--secondaryColor);
+  font-weight: 700;
+}
+
+.multi-select-component {
+  width: 100%;
+  background: #bdbdbd;
+  padding: 8px;
+  border-radius: 10px;
+  /* border-radius: 1rem; */
+  /* background-color: aqua; */
+}
+.multi-select-box div {
+  border-radius: 1rem;
+}
