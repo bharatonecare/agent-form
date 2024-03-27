@@ -1,0 +1,1 @@
+export const SERVER = "https://agent-form-c7438-default-rtdb.asia-southeast1.firebasedatabase.app/";

@@ -1,0 +1,15 @@
+.agent-form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.agent-form {
+  width: 100%;
+  padding: 20px 40px;
+  max-width: 1024px;
+}
+.agent-form-logo {
+  width: 100px;
+  margin: auto;
+}
